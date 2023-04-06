@@ -122,6 +122,7 @@ cvo_base_gate_1 animate ["Door_1_rot", 1];
 params ["_triggerOBJ","_guardOBJ","_gateOBJ", "_guardPos"];
 
 systemChat str _this;
+systemChat str thisList;
 
 
 private _idleArray = [
@@ -243,3 +244,23 @@ _guardOBJ playMove "acts_millerChopper_out";
 };
 
 
+
+
+
+ied_tunnel_1_entrance
+
+this addAction ["Exit the Tunnel", {      
+  
+1 cutText ["","BLACK OUT",1];  
+  
+sleep 2;  
+  
+player setPosASL (getPosASL ied_tunnel_1_entrance);   
+player setDir 0;  
+  
+sleep 0.5;    
+ 
+1 cutText ["","BLACK IN",1];  
+  
+  
+}, nil, 1.5, true, true, "", "true", 5, false, "", ""]; 
