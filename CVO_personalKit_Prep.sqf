@@ -11,6 +11,9 @@ rhs_100Rnd_762x54mmR_green // Tracer
 /////////////////////////////////
 ////// PKP Kit
 
+
+
+
 // Gun
 rhs_weap_pkp
 
@@ -196,7 +199,6 @@ rhs_acc_tgpv2
 //// G3A3
 
 UK3CB_G3A3
-
 UK3CB_G3_20rnd_762x51_GT
 UK3CB_G3_20rnd_762x51_RT
 UK3CB_G3_20rnd_762x51_WT
@@ -206,20 +208,19 @@ UK3CB_G3_20rnd_762x51_R
 UK3CB_G3_20rnd_762x51_W
 UK3CB_G3_20rnd_762x51_Y
 UK3CB_G3_20rnd_762x51
-UK3CB_G3A3
-
+greenmag_ammo_762x51_basic_30Rnd
+greenmag_ammo_762x51_basic_60Rnd
 uk3cb_optic_accupoint_g3
 uk3cb_optic_stanagzf_g3
 uk3cb_optic_stanagzf2d_g3
 uk3cb_optic_zfsg1
-
 uk3cb_muzzle_snds_g3
 
 /////////////////////////////////
 //// FN FAL
 
-UK3CB_FNFAL_PARA
 UK3CB_FNFAL_FOREGRIP
+UK3CB_FNLAR
 UK3CB_FNFAL_FULL
 
 UK3CB_FNFAL_20rnd_762x51
@@ -232,5 +233,40 @@ UK3CB_FNFAL_20rnd_762x51_WT
 UK3CB_FNFAL_20rnd_762x51_RT
 UK3CB_FNFAL_20rnd_762x51_GT
 
+//Scopes
 uk3cb_optic_suit_fnfal
+
+greenmag_ammo_762x51_basic_30Rnd
+greenmag_ammo_762x51_basic_60Rnd
+
+
+// Lee Enfield
+uk3cb_enfield_no4
+uk3cb_enfield_no4_walnut
+
+// AMMO
+uk3cb_no4_enfield_303_10Rnd_magazine_YT
+uk3cb_no4_enfield_303_10Rnd_magazine_WT
+uk3cb_no4_enfield_303_10Rnd_magazine_RT
+uk3cb_no4_enfield_303_10Rnd_magazine_GT
+uk3cb_no4_enfield_303_10Rnd_magazine_Y
+uk3cb_no4_enfield_303_10Rnd_magazine_W
+uk3cb_no4_enfield_303_10Rnd_magazine_R
+uk3cb_no4_enfield_303_10Rnd_magazine_G
+uk3cb_no4_enfield_303_10Rnd_magazine
+
+
+// 303 Brit
+CVO_greenmag_ammo_77x56_Basic_60Rnd
+CVO_greenmag_ammo_77x56_Basic_30Rnd
+
+
+// Marksman Kit
+uk3cb_enfield_no4t
+uk3cb_enfield_no4t_walnut
+
+uk3cb_optic_no32_distressed
+uk3cb_optic_no32_vintage
+uk3cb_optic_no32
+
 
