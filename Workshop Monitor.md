@@ -63,8 +63,8 @@
 ace 	https://steamcommunity.com/sharedfiles/filedetails/?id=463939057
 CBA_A3 	https://steamcommunity.com/sharedfiles/filedetails/?id=450814997
 
-ACE Particles 	https://steamcommunity.com/sharedfiles/filedetails/?id=2202413537
-ACE Tracers 	https://steamcommunity.com/sharedfiles/filedetails/?id=2202414450
+ACE Particles 	https://steamcommunity.com/sharedfiles/filedetails/?id=2202413537   // Hidden
+ACE Tracers 	https://steamcommunity.com/sharedfiles/filedetails/?id=2202414450   // Hidden
 
 ACE Interaction Menu Expansion 	            https://steamcommunity.com/sharedfiles/filedetails/?id=1376867375
 ACE 3 Extension (Animations and Actions) 	https://steamcommunity.com/sharedfiles/filedetails/?id=766491311
