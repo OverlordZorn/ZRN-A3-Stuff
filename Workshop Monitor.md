@@ -1,62 +1,4 @@
-## Old list of workshop IDs
-
-```
-463939057
-751965892
-450814997
-2140308792
-843577117
-843425103
-843593391
-1224892496
-1779063631
-2018593688
-846847515
-501589008
-2185874952
-2162811561
-825174634
-2284597972
-1598087521
-583496184
-2222778153
-825172265
-825179978
-583544987
-708597484
-886316372
-541888371
-497661914
-497660133
-621650475
-549676314
-1703187116
-1673456286
-2352603233
-1916062371
-2015698945
-1740990569
-2195131993
-1981964169
-903134884
-2820304397
-2867537125
-2820127143
-2819732932
-753946944
-925018569
-2794721649
-1354112941
-2850035262
-639837898
-2375937723
-2577441180
-1740990569
-2633534991
-2861952840
-```
-
-## New List and Command for Workshop Monitor (25 max per command)
+# New List and Command for Workshop Monitor (25 max per command)
 
 ### ACE CBA Basics
 
@@ -116,10 +58,10 @@ Gruppe Adler Trenches 	https://steamcommunity.com/sharedfiles/filedetails/?id=12
 
 
 ### Movement etc
-Advanced Vault System: Remastered 	https://steamcommunity.com/sharedfiles/filedetails/?id=2794721649
+Advanced Vault System: Remastered 	    https://steamcommunity.com/sharedfiles/filedetails/?id=2794721649
 Advanced Urban Rapelling v2 (remade) 	https://steamcommunity.com/sharedfiles/filedetails/?id=1916062371
-Death and Hit reactions 	https://steamcommunity.com/sharedfiles/filedetails/?id=2993442344
-Alternative Running 	https://steamcommunity.com/sharedfiles/filedetails/?id=2198339170
+Death and Hit reactions 	    https://steamcommunity.com/sharedfiles/filedetails/?id=2993442344
+Alternative Running 	        https://steamcommunity.com/sharedfiles/filedetails/?id=2198339170
 WMO - Walkable Moving Objects 	https://steamcommunity.com/sharedfiles/filedetails/?id=925018569
 
 
@@ -217,4 +159,85 @@ Deformer                        https://steamcommunity.com/sharedfiles/filedetai
 2369477168, 
 623475643, 
 2822758266
+```
+
+### RHS
+
+```
+RHS USAF        https://steamcommunity.com/sharedfiles/filedetails/?id=843577117
+RHS AFRF        https://steamcommunity.com/sharedfiles/filedetails/?id=843425103
+RHS GREF        https://steamcommunity.com/sharedfiles/filedetails/?id=843593391
+RHS SAF         https://steamcommunity.com/sharedfiles/filedetails/?id=843632231
+
+3CB Factions    https://steamcommunity.com/sharedfiles/filedetails/?id=2288691268
+RHS TERRACORE   https://steamcommunity.com/sharedfiles/filedetails/?id=1673456286
+
+```
+/mods track collection:659312a5c63729801b207247 ids:
+843577117,
+843425103,
+843593391,
+843632231,
+2288691268,
+1673456286,
+```
+
+
+
+## Old list of workshop IDs
+
+```
+463939057
+751965892
+450814997
+2140308792
+843577117
+843425103
+843593391
+1224892496
+1779063631
+2018593688
+846847515
+501589008
+2185874952
+2162811561
+825174634
+2284597972
+1598087521
+583496184
+2222778153
+825172265
+825179978
+583544987
+708597484
+886316372
+541888371
+497661914
+497660133
+621650475
+549676314
+1703187116
+1673456286
+2352603233
+1916062371
+2015698945
+1740990569
+2195131993
+1981964169
+903134884
+2820304397
+2867537125
+2820127143
+2819732932
+753946944
+925018569
+2794721649
+1354112941
+2850035262
+639837898
+2375937723
+2577441180
+1740990569
+2633534991
+2861952840
 ```
