@@ -1,0 +1,126 @@
+cvo_fnc_airlift = {
+
+    /*
+    * Author: Zorn
+    * Creates Waypoints to Slingload slingloadable cargo to an destination and then returns to a waiting point.
+    *
+    * Arguments:
+    * 0: _heliCrew     <Group>             - Group of Heli Crew
+    * 1: _cargoObj     <Object>            - Object to be slung - needs to be slingloadable!
+    * 2: _dropOffPos   <Object or Pos>     - Destination of the Cargo Object. Ether Pos or Object, like empty Helipad.
+    * 3: _returnPos    <Object or Pos>     - Point of return for the helicopter once the cargo has been delivered. Ether Pos or Object, like empty Helipad.
+    * 4: _protected    <Bool>              - allowDamage false on Heli and crew if True <Default: True>
+    *
+    * Return Value:
+    * none
+    *
+    * Example:
+    * [airlift_heli_1_grp,airlift_cargo_1, DZ_1, LZ, true] call cvo_fnc_airlift;
+    *
+    * Public: [Yes/No]
+    */
+
+
+
+    params [
+        [ "_heliCrew",	   grpNull,		   [grpNull]		       ],
+        [ "_cargoObj",	   objNull,		   [objNull]		       ],
+        [ "_dropOffPos","UNDEFINED",	   [objNull,[]],	  [2,3]],
+        [ "_returnPos",	"UNDEFINED",	   [objNull,[]],	  [2,3]],
+        [ "_protected",       true,       [false]                 ]
+    ];
+
+    if (_heliCrew isEqualTo grpNull) exitWith {};
+    if (_cargoObj isEqualTo objNull) exitWith {};
+
+    if (_dropOffPos isEqualTo "UNDEFINED") exitWith {};
+
+    if (_protected) then {
+        { _x allowDamage false; } forEach units _heliCrew + [vehicle leader _heliCrew];
+    };
+
+
+	private ["_dropOffPosObj", "_returnPosObj"];
+
+    If (_dropOffPos isEqualType []) then {
+        _dropOffPosObj = createVehicle ["Land_HelipadEmpty_F", _dropOffPos];
+    } else {    _dropOffPosObj = _dropOffPos; _dropOffPos = getPos _dropOffPosObj;  };
+
+
+    if (_returnPos isEqualTo "UNDEFINED") then {
+        _returnPos = getPos leader _heliCrew;
+    };
+
+    If (_returnPos isEqualType []) then {
+        _returnPosObj = createVehicle ["Land_HelipadEmpty_F", _returnPos];
+    } else {    _returnPosObj = _returnPos; _returnPos = getPos _returnPosObj;  };
+
+
+
+    private _heliObj = vehicle leader _heliCrew;
+    private _heliPos = getPos leader _heliCrew;
+    private _cargoPos = getPos _cargoObj;
+
+    private _dirCargoToHeli = _cargoObj getDir _heliObj;
+
+    _heliObj setFuel 1;
+
+    // Empty the cargo vehicle and locks it + setMass for Airlift
+    {	moveOut _x;	} foreach crew _cargoObj;
+
+    _cargoObj lockCargo true;
+    _cargoObj lockDriver true;
+    { _cargoObj lockTurret [_x, true]; } foreach allTurrets [_cargoObj, true];
+    _cargoObj setMass 1000;
+
+
+
+
+    _heliObj limitSpeed 300;
+
+    private _wpPos1 = _cargoPos getPos [750, _dirCargoToHeli];
+    private _wpPos2 = _cargoPos getPos [200, _dirCargoToHeli];
+    private _wpPos3 = _cargoPos getPos [50, _dirCargoToHeli];
+    private _wpPos4 = + _cargoPos;
+    private _wpPos5 = + _cargoPos; // _cargoPos getPos [150, _dirCargoToHeli + 180];
+
+    private _wp1 = _heliCrew addWaypoint [_wpPos1, -1];
+    _wp1 setWaypointBehaviour "CARELESS";
+    _wp1 setWaypointStatements ["true", "vehicle this flyInHeight [50, true]; vehicle this limitSpeed 150;"];
+    _wp1 setWaypointSpeed "FULL";
+
+
+    private _wp2 = _heliCrew addWaypoint [_wpPos2, -1];
+    _wp2 setWaypointStatements ["true", "vehicle this flyInHeight [30, true]; vehicle this limitSpeed 100;"];
+    _wp2 setWaypointSpeed "LIMITED";
+
+    private _wp3 = _heliCrew addWaypoint [_wpPos3, -1];
+    _wp3 setWaypointStatements ["true", "vehicle this flyInHeight [30, false]; this limitSpeed 50;"];
+
+
+
+    private _wp4 = _heliCrew addWaypoint [_cargoObj, -1];
+    _wp4 waypointAttachVehicle _cargoObj;
+    _wp4 setWaypointType "HOOK";
+    _wp4 setWaypointStatements ["true", "vehicle this flyInHeight [15, false]; vehicle this limitSpeed 25;"];
+
+
+    private _wp5 = _heliCrew addWaypoint [_wpPos5, -1];
+    _wp5 setWaypointStatements ["true", "vehicle this flyInHeight [75, true]; vehicle this limitSpeed 300;"];
+
+
+
+    private _wp6 = _heliCrew addWaypoint [_dropOffPos, -1];
+    private _wp7 = _heliCrew addWaypoint [_dropOffPos, -1];
+    _wp7 waypointAttachVehicle _dropOffPosObj;
+    _wp7 setWaypointType "UNHOOK";
+    _wp7 setWaypointStatements ["true", "vehicle this flyInHeight [50, false]; vehicle this limitSpeed 300;"];
+
+
+    private _wp8 = _heliCrew addWaypoint [_returnPos, -1];
+    _wp8 setWaypointSpeed "FULL";
+    _wp8 setWaypointStatements ["true", "vehicle this land 'LAND'"];
+    _wp8 waypointAttachVehicle _returnPosObj;
+
+};
+
