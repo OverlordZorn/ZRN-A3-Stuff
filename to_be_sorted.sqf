@@ -1,14 +1,12 @@
-if you only spawn them in via ZEUS and not via script or anything you can also add an event handler
-https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#CuratorObjectPlaced
+// if you only spawn them in via ZEUS and not via script or anything you can also add an event handler
+// https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#CuratorObjectPlaced
 
-```sqf
 this addEventHandler ["CuratorObjectPlaced", {
 	params ["_curator", "_entity"];
     if (typeOf _entity isEqualTo "CUP_O_BTR90_RU") then {
 		_entity removeMagazinesTurret ["CUP_400Rnd_30mm_AGS17_M", [0]];
 	};
 }];
-```
 
 
 

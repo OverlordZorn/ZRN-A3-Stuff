@@ -2,7 +2,7 @@
 
 isMedic = _unit getVariable ["ace_medical_medicClass", 0];
 if (isMedic > 0) then {
-    // is medic
+    // is Medic or Doctor
 };
 
 if (isMedic == 2) then {
@@ -11,7 +11,7 @@ if (isMedic == 2) then {
 
 isEngineer = _unit getVariable ["ACE_IsEngineer", 0];
 if (isEngineer > 0) then {
-    // is Engineer
+    // is Engineer or Adv. Engineer
 };
 
 if (isEngineer == 2) then {
