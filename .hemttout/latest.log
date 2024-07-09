@@ -1,0 +1,8 @@
+2024-03-31T13:52:23.344292Z TRACE ThreadId(01) version: 1.11.2
+2024-03-31T13:52:23.344375Z TRACE ThreadId(01) platform: windows
+2024-03-31T13:52:23.344395Z TRACE ThreadId(01) args: [
+    "C:\\Users\\Dennis Zorn\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrettMayson.HEMTT_Microsoft.Winget.Source_8wekyb3d8bbwe\\hemtt.exe",
+    "launch",
+    "Stratis",
+]
+2024-03-31T13:52:23.344791Z ERROR ThreadId(01) `a hemtt project file is invalid: IO Error: The system cannot find the path specified. (os error 3)
